@@ -1,0 +1,28 @@
+@startuml
+hide footbox
+title Coordinator Service
+participant "Operating System" as os
+participant "DriverService" as driverservice
+participant "Coordinator" as coordinator
+participant "Client" as client
+
+=== Service Registration ==
+os -> driverservice : Start
+driverservice -> coordinator : Register
+
+alt if Coordinator responds
+    coordinator -> driverservice : Ok
+    driverservice -> driverservice : Start server
+else If Coordinator doesn't respond
+    driverservice -> driverservice : Terminate
+end
+
+=== Client Coordination (Load Balancing) ==
+client -> coordinator : Request URL
+coordinator -> driverservice : Get Health
+driverservice -> coordinator : Return Health
+coordinator -> coordinator : Find optimal DriverService
+coordinator -> client : Return URL of optimal DriverService
+client -> driverservice : Establish WebSocket connection
+
+@enduml
