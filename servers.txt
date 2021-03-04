@@ -1,0 +1,29 @@
+Host nicolibach1
+    User admin
+    #HostName nicolibach1.uvm.sdu.dk
+    HostName 10.123.252.250
+
+Host nicolibach2
+    User admin
+    #HostName nicolibach2.uvm.sdu.dk
+    HostName 10.123.252.251
+
+Host nicolibach3
+    User admin
+    #HostName nicolibach3.uvm.sdu.dk
+    HostName 10.123.252.248
+
+Host nicolibach4
+    User admin
+    #HostName nicolibach4.uvm.sdu.dk
+    HostName 10.123.252.253
+
+Host nicolibach5
+    User admin
+    #HostName nicolibach5.uvm.sdu.dk
+    HostName 10.123.252.246
+
+Host nicolibach6
+    User admin
+    #HostName nicolibach6.uvm.sdu.dk
+    HostName 10.123.252.243
