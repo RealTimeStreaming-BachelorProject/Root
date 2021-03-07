@@ -9,7 +9,7 @@ server_loadbalancer="admin@10.123.252.246"
 ssh $server_loadbalancer rm -rf LoadBalancer_DriverService # Folder might already exist
 ssh $server_loadbalancer git clone https://github.com/RealTimeStreaming-BachelorProject/LoadBalancer_DriverService.git
 ssh $server_loadbalancer sudo docker-compose -f ./LoadBalancer_DriverService/docker-compose.yml build
-ssh $server_loadbalancer sudo docker-compose -f ./LoadBalancer_DriverService/docker-compose.yml up
+ssh $server_loadbalancer sudo docker-compose -f ./LoadBalancer_DriverService/docker-compose.yml up -d
 
 
 # DriverService
